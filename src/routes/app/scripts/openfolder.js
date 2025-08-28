@@ -1,4 +1,4 @@
-import { Dir, currentFiles } from './store.js';
+import { Dir, currentFiles } from '../store.js';
 
 export async function openFolder(Path) {
 	Dir.set(Path);

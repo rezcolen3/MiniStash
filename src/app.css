@@ -1,1 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Space+Grotesk&display=swap');
+@import 'https://www.nerdfonts.com/assets/css/webfont.css';
 @import 'tailwindcss';
+
+:root {
+    @apply dark:bg-gray-900 dark:text-gray-100;
+}
