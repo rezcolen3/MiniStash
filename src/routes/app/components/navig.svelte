@@ -1,19 +1,25 @@
 <script>
-	import { openFolder } from "../scripts/openfolder.js";
-	import { Dir } from "../store.js";
+	import { openFolder } from '../scripts/openfolder.js';
+	import { Dir } from '../store.js';
 </script>
+
 <div class="flex justify-between">
 	<h1 class="flex items-center gap-2 text-3xl font-bold">
 		<i class="nf-fa-folder_open nf"></i>
 		<span class="font-[Space_Grotesk]"> DIRECTORY:</span>
 		<div>
-			{#each $Dir as dir, i}
-				<a
+			<button
+				class="cursor-pointer font-['Jersey_10'] underline transition hover:text-black dark:hover:text-white"
+				onclick={() => openFolder([''])}
+			>
+				ROOT:
+			</button>{#each $Dir as dir, i}
+				<button
 					class="cursor-pointer font-['Jersey_10'] underline transition hover:text-black dark:hover:text-white"
 					onclick={() => openFolder($Dir.slice(0, i + 1))}
-					>
+				>
 					{dir}
-				</a>/
+				</button>/
 			{/each}
 		</div>
 	</h1>

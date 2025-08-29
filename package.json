@@ -30,6 +30,7 @@
 		"vite": "^7.0.4"
 	},
 	"dependencies": {
-		"@supabase/supabase-js": "^2.56.0"
+		"@supabase/supabase-js": "^2.56.0",
+		"svelte-5-french-toast": "^2.0.6"
 	}
 }
