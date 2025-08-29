@@ -1,13 +1,16 @@
 <div class="flex justify-between">
-	<h1 class="text-3xl font-bold">
-		<span class="font-[Space_Grotesk]">DIRECTORY:</span>
-		{#each ['', 'files', 'projects'] as dir}
-			<button
-				class="cursor-pointer font-['Jersey_10'] underline transition hover:text-black dark:hover:text-white"
-			>
-				{dir}
-			</button>/
-		{/each}
+	<h1 class="flex items-center gap-2 text-3xl font-bold">
+		<i class="nf-fa-folder_open nf"></i>
+		<span class="font-[Space_Grotesk]"> DIRECTORY:</span>
+		<div>
+			{#each ['', 'files', 'projects'] as dir}
+				<a
+					class="cursor-pointer font-['Jersey_10'] underline transition hover:text-black dark:hover:text-white"
+				>
+					{dir}
+				</a>/
+			{/each}
+		</div>
 	</h1>
 	<div class="gap-2 text-3xl">
 		<button
