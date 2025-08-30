@@ -8,7 +8,7 @@
 
 <div
 	onclick={() => popup.set(null)}
-	class="absolute top-0 left-0 z-20 h-screen w-screen backdrop-blur-xs"
+	class="fixed top-0 left-0 z-20 h-screen w-screen backdrop-blur-xs"
 ></div>
 
 <div
