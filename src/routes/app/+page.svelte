@@ -12,7 +12,9 @@
 	import NewFile from './components/new-file.svelte';
 </script>
 
-<div class="m-3 flex h-full flex-col gap-3 rounded border-2 border-gray-300 p-3 text-gray-300">
+<div
+	class="absolute top-3 right-3 bottom-3 left-3 flex flex-col gap-3 rounded border-2 border-gray-300 p-3 text-gray-300"
+>
 	<Navig />
 
 	<hr class="rounded border-gray-500" />
