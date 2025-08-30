@@ -25,6 +25,7 @@
 	</h1>
 	<div class="gap-2 text-3xl">
 		<button
+			onclick={() => popup.set('new-folder')}
 			class="cursor-pointer transition hover:scale-110 hover:text-black dark:hover:text-white"
 			aria-label="Create new folder"
 		>

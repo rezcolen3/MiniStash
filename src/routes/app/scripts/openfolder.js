@@ -14,11 +14,13 @@ export async function openFolder(Path) {
 			reject(error);
 		}
 		const data = await response.json();
-		const parsedData = data.files.map((file) => ({
-			name: file.name,
-			is_folder: file.id === null,
-			id: file.id,
-		}));
+		const parsedData = data.files
+			.filter((file) => file.name !== '.initfolderfileignore')
+			.map((file) => ({
+				name: file.name,
+				is_folder: file.id === null,
+				id: file.id,
+			}));
 		Files.set(parsedData);
 		resolve();
 	});
