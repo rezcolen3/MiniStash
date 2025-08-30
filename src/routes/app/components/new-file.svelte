@@ -1,6 +1,7 @@
 <script>
 	import { popup, Dir } from '../store.js';
 	import { handleUpload } from '../scripts/newfile.js';
+	import toast from 'svelte-5-french-toast';
 
 	let file;
 	let filename;
@@ -31,7 +32,9 @@
 				class="absolute top-0 left-0 h-full w-full cursor-pointer opacity-0"
 				onchange={(e) => {
 					file = e.target.files[0];
-					filename = e.target.files[0].name;
+					if (!filename) {
+                        filename = file.name;
+                    }
 				}}
 			/>
 		</div>
@@ -51,7 +54,12 @@
 
 	<button
 		class="mt-3 w-full cursor-pointer rounded border-2 px-3 py-1 transition hover:border-indigo-600"
-		onclick={() => handleUpload(file, `${$Dir.filter(Boolean).join('/')}/${filename}`)}
-		>Upload</button
+		onclick={() => {
+			if (file && filename) {
+				handleUpload(file, `${$Dir.filter(Boolean).join('/')}/${filename}`);
+			} else {
+				toast.error('Please select a file and enter a filename.');
+			}
+		}}>Upload</button
 	>
 </div>
