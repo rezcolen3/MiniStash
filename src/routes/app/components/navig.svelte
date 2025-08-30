@@ -1,6 +1,6 @@
 <script>
 	import { openFolder } from '../scripts/openfolder.js';
-	import { Dir } from '../store.js';
+	import { Dir, popup } from '../store.js';
 </script>
 
 <div class="flex justify-between">
@@ -31,6 +31,7 @@
 			<i class="nf nf-cod-new_folder"></i>
 		</button>
 		<button
+			onclick={() => popup.set('new-file')}
 			class="cursor-pointer transition hover:scale-110 hover:text-black dark:hover:text-white"
 			aria-label="Create new file"
 		>

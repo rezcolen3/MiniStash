@@ -7,6 +7,9 @@
 	onMount(() => {
 		openFolder(['']);
 	});
+
+	import { popup } from './store';
+	import NewFile from './components/new-file.svelte';
 </script>
 
 <div class="m-3 flex h-full flex-col gap-3 rounded border-2 border-gray-300 p-3 text-gray-300">
@@ -15,4 +18,8 @@
 	<hr class="rounded border-gray-500" />
 
 	<Files />
+
+	{#if $popup === 'new-file'}
+		<NewFile />
+	{/if}
 </div>

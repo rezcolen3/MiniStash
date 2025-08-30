@@ -3,6 +3,8 @@ import { writable } from 'svelte/store';
 export let Dir = writable(['']);
 export let Files = writable([]);
 
+export let popup = writable(null);
+
 /*
 let test = [
 		{ name: 'file 1', is_folder: false, id: 4324 },
