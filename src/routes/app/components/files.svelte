@@ -1,4 +1,5 @@
 <script>
+	import { downloadFile } from '../scripts/downloadfile.js';
 	import { openFolder } from '../scripts/openfolder.js';
 	import { Files, Dir } from '../store.js';
 
@@ -6,7 +7,7 @@
 </script>
 
 <div class="flex-1 overflow-y-auto">
-	{#each $Files as file, i}
+	{#each $Files as file}
 		<a
 			class="relative flex w-full cursor-pointer items-center justify-between rounded p-2 hover:bg-gray-600"
 			href="javascript:void(0)"
@@ -15,7 +16,7 @@
 					if (file.is_folder) {
 						openFolder([...$Dir, file.name]);
 					} else {
-						alert(`Opening file: ${file.name}`);
+						downloadFile([...$Dir, file.name]);
 					}
 				} else {
 					menuClicked = false;
