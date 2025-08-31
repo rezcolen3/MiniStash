@@ -14,7 +14,6 @@
 <div
 	class="absolute top-1/2 left-1/2 z-30 flex w-full max-w-100 -translate-x-1/2 -translate-y-1/2 transform flex-col gap-2 rounded border-2 bg-gray-800 p-3"
 >
-
 	<div>
 		<label for="foldername">Folder Name</label>
 		<input
@@ -34,6 +33,7 @@
 			} else {
 				toast.error('Please enter a folder name.');
 			}
-		}}>Create</button
-	>
+		}}
+		>Create
+	</button>
 </div>
