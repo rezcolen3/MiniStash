@@ -8,18 +8,20 @@
 		<i class="nf-fa-folder_open nf"></i>
 		<span class="font-[Space_Grotesk]"> DIRECTORY:</span>
 		<div>
-			<button
+			<a
 				class="cursor-pointer font-['Jersey_10'] underline transition hover:text-black dark:hover:text-white"
+				href="javascript:void(0)"
 				onclick={() => openFolder([''])}
 			>
 				ROOT:
-			</button>{#each $Dir as dir, i}
-				<button
+			</a>{#each $Dir as dir, i}
+				<a
 					class="cursor-pointer font-['Jersey_10'] underline transition hover:text-black dark:hover:text-white"
+					href="javascript:void(0)"
 					onclick={() => openFolder($Dir.slice(0, i + 1))}
 				>
 					{dir}
-				</button>/
+				</a>/
 			{/each}
 		</div>
 	</h1>
