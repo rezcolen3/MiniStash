@@ -11,6 +11,7 @@
 	import { popup } from './store';
 	import NewFile from './components/new-file.svelte';
 	import NewFolder from './components/new-folder.svelte';
+	import Move from './components/move.svelte';
 </script>
 
 <div
@@ -25,6 +26,8 @@
 	{#if $popup === 'new-file'}
 		<NewFile />
 	{:else if $popup === 'new-folder'}
-		<NewFolder /> 
+		<NewFolder />
+	{:else if $popup === 'move'}
+		<Move />
 	{/if}
 </div>

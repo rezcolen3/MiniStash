@@ -1,7 +1,7 @@
 <script>
 	import { downloadFile } from '../scripts/downloadfile.js';
 	import { openFolder } from '../scripts/openfolder.js';
-	import { Files, Dir } from '../store.js';
+	import { Files, Dir, popup, moveOldLocation } from '../store.js';
 
 	let menuClicked = false;
 </script>
@@ -33,11 +33,13 @@
 				<button
 					onclick={() => {
 						menuClicked = true;
+						popup.set('move');
+						moveOldLocation.set([...$Dir, file.name].filter(Boolean).join('/'));
 					}}
 					aria-label="More options"
 					class="flex h-6 w-6 cursor-pointer flex-col items-center justify-center rounded p-1 text-sm text-gray-500 hover:bg-gray-700"
 				>
-					<i class="nf nf-md-rename_box"></i>
+					<i class="nf {file.is_folder ? 'nf-md-folder_move' : 'nf-md-file_move'}"></i>
 				</button>
 				<button
 					onclick={() => {

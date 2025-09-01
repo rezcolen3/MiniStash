@@ -10,9 +10,9 @@ A **Mini Stash** for all your files
 - [x] create new folders
 - [x] download files
 - [x] open folders by clicking files view
+- [x] rename/move files
 - [ ] proper theme support
 - [ ] delete files
-- [ ] rename files
 - [ ] login
 - [ ] rate-limits
 - [ ] server api auth for login
