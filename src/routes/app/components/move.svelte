@@ -1,9 +1,9 @@
 <script>
 	import toast from 'svelte-5-french-toast';
-	import { popup, moveOldLocation } from '../store.js';
+	import { popup, moveOrDeleteLocation } from '../store.js';
 	import { move } from '../scripts/move.js';
 
-	let location = $moveOldLocation;
+	let location = $moveOrDeleteLocation;
 </script>
 
 <div
@@ -28,10 +28,10 @@
 	<button
 		class="mt-3 w-full cursor-pointer rounded border-2 px-3 py-1 transition hover:border-indigo-600"
 		onclick={() => {
-			if (location == $moveOldLocation || !location) {
+			if (location == $moveOrDeleteLocation || !location) {
 				toast.error('Please enter a new location.');
 			} else {
-				move($moveOldLocation, location);
+				move($moveOrDeleteLocation, location);
 			}
 		}}
 		>Move

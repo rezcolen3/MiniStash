@@ -12,6 +12,7 @@
 	import NewFile from './components/new-file.svelte';
 	import NewFolder from './components/new-folder.svelte';
 	import Move from './components/move.svelte';
+	import Delete from './components/delete.svelte';
 </script>
 
 <div
@@ -29,5 +30,7 @@
 		<NewFolder />
 	{:else if $popup === 'move'}
 		<Move />
+	{:else if $popup === 'delete'}
+		<Delete />
 	{/if}
 </div>

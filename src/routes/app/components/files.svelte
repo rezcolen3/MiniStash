@@ -1,7 +1,7 @@
 <script>
 	import { downloadFile } from '../scripts/downloadfile.js';
 	import { openFolder } from '../scripts/openfolder.js';
-	import { Files, Dir, popup, moveOldLocation } from '../store.js';
+	import { Files, Dir, popup, moveOrDeleteLocation } from '../store.js';
 
 	let menuClicked = false;
 </script>
@@ -34,7 +34,7 @@
 					onclick={() => {
 						menuClicked = true;
 						popup.set('move');
-						moveOldLocation.set([...$Dir, file.name].filter(Boolean).join('/'));
+						moveOrDeleteLocation.set([...$Dir, file.name].filter(Boolean).join('/'));
 					}}
 					aria-label="More options"
 					class="flex h-6 w-6 cursor-pointer flex-col items-center justify-center rounded p-1 text-sm text-gray-500 hover:bg-gray-700"
@@ -44,6 +44,8 @@
 				<button
 					onclick={() => {
 						menuClicked = true;
+						popup.set('delete');
+						moveOrDeleteLocation.set([...$Dir, file.name].filter(Boolean).join('/'));
 					}}
 					aria-label="More options"
 					class="flex h-6 w-6 cursor-pointer flex-col items-center justify-center rounded p-1 text-sm text-gray-500 hover:bg-gray-700"

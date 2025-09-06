@@ -11,8 +11,8 @@ A **Mini Stash** for all your files
 - [x] download files
 - [x] open folders by clicking files view
 - [x] rename/move files
+- [x] delete files
 - [ ] proper theme support
-- [ ] delete files
 - [ ] login
 - [ ] rate-limits
 - [ ] server api auth for login
