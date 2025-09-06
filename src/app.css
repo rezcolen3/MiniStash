@@ -3,5 +3,5 @@
 @import 'tailwindcss';
 
 :root {
-    @apply dark:bg-gray-900 dark:text-gray-100;
+    @apply dark:bg-gray-900 dark:text-gray-300 text-gray-600;
 }

@@ -16,7 +16,7 @@ Every **Mini Stash** is self host-able (Supabase + SvelteKit) storage solution.
 - [x] open folders by clicking files view
 - [x] rename/move files
 - [x] delete files
-- [ ] proper theme support
+- [x] proper theme support
 - [ ] login
 - [ ] rate-limits
 - [ ] server api auth for login

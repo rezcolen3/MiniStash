@@ -16,7 +16,7 @@
 </script>
 
 <div
-	class="absolute top-3 right-3 bottom-3 left-3 flex flex-col gap-3 rounded border-2 border-gray-300 p-3 text-gray-300"
+	class="absolute top-3 right-3 bottom-3 left-3 flex flex-col gap-3 rounded border-2 border-gray-300 p-3"
 >
 	<Navig />
 

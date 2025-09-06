@@ -13,7 +13,7 @@
 ></div>
 
 <div
-	class="absolute top-1/2 left-1/2 z-30 flex w-full max-w-100 -translate-x-1/2 -translate-y-1/2 transform flex-col gap-2 rounded border-2 bg-gray-800 p-3"
+	class="absolute top-1/2 left-1/2 z-30 flex w-full max-w-100 -translate-x-1/2 -translate-y-1/2 transform flex-col gap-2 rounded border-2 bg-gray-300 p-3 dark:dark:bg-gray-800"
 >
 	<div>
 		<label for="file-upload">File</label>
@@ -33,8 +33,8 @@
 				onchange={(e) => {
 					file = e.target.files[0];
 					if (!filename) {
-                        filename = file.name;
-                    }
+						filename = file.name;
+					}
 				}}
 			/>
 		</div>

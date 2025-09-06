@@ -9,7 +9,7 @@
 <div class="flex-1 overflow-y-auto">
 	{#each $Files as file}
 		<a
-			class="relative flex w-full cursor-pointer items-center justify-between rounded p-2 hover:bg-gray-600"
+			class="relative flex w-full cursor-pointer items-center justify-between rounded p-2 hover:bg-gray-300 dark:hover:bg-gray-600"
 			href="javascript:void(0)"
 			onclick={() => {
 				if (!menuClicked) {
@@ -37,7 +37,7 @@
 						moveOrDeleteLocation.set([...$Dir, file.name].filter(Boolean).join('/'));
 					}}
 					aria-label="More options"
-					class="flex h-6 w-6 cursor-pointer flex-col items-center justify-center rounded p-1 text-sm text-gray-500 hover:bg-gray-700"
+					class="flex h-6 w-6 cursor-pointer flex-col items-center justify-center rounded p-1 text-sm text-gray-500 hover:bg-gray-400 dark:hover:bg-gray-700"
 				>
 					<i class="nf {file.is_folder ? 'nf-md-folder_move' : 'nf-md-file_move'}"></i>
 				</button>
@@ -48,7 +48,7 @@
 						moveOrDeleteLocation.set([...$Dir, file.name].filter(Boolean).join('/'));
 					}}
 					aria-label="More options"
-					class="flex h-6 w-6 cursor-pointer flex-col items-center justify-center rounded p-1 text-sm text-gray-500 hover:bg-gray-700"
+					class="flex h-6 w-6 cursor-pointer flex-col items-center justify-center rounded p-1 text-sm text-gray-500 hover:bg-gray-400 dark:hover:bg-gray-700"
 				>
 					<i class="nf nf-md-delete"></i>
 				</button>
